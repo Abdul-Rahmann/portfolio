@@ -1,4 +1,9 @@
 /* General Styles */
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,14 +18,22 @@ h1, h2, h3 {
     text-align: center;
 }
 
-nav ul {
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;  /* Sticks to the top when scrolling */
+    z-index: 1000;
     background-color: #333;
-    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0;
-    padding: 10px 0;
 }
 
 nav ul li {
@@ -28,8 +41,82 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Highlight effect */
+}
+
+/* General Responsive Tweaks */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;  /* Stack navigation links vertically */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 15px;  /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Fonts and Colors */
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean, professional font */
+    background-color: #f4f4f9;        /* Soft neutral background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #444;
+    font-family: 'Georgia', serif;   /* Add some contrast with a serif font */
+}
+
+section {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Button and Link Improvements */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 /* Section Spacing */
