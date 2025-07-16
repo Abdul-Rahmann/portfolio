@@ -6,125 +6,393 @@
     <meta name="description" content="A portfolio showcasing my projects, skills, and an easy way to contact me.">
     <meta name="keywords" content="portfolio, developer, web development, projects, contact">
     <meta name="author" content="Samuel Adetsi">
-    <title>My Portfolio</title>
+    <title>Samuel Adetsi - Web Developer Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<!-- Navigation Bar -->
-<nav>
-    <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi there, I’m a developer passionate about building scalable and user-friendly applications!</p>
-</header>
-
-<!-- Hero Section -->
-<button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙 Toggle Dark Mode</button>
-
-<!-- About Me Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>Hello! My name is Samuel Adetsi, and I am a web developer. I specialize in front-end development and data analysis. I love solving problems with clean, efficient code.</p>
-    <p>Download my resume: <a href="assets/resume/samuel_adetsi-resume.pdf" download>Click here</a>.</p>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <!-- Horizontal Scroll Container -->
-    <div class="projects-scroll">
-        <div class="project-card">
-            <h3>Project 2: Task Tracker</h3>
-            <img src="assets/images/projects1-image.png" alt="Project 2">
-            <p>A productivity app to track tasks, with features like CRUD operations and analytics.</p>
-            <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
-            <a href="https://github.com/samuel-adetsi/task-tracker" target="_blank">GitHub Repo</a> |
-            <a href="https://task-tracker-app-demo.com" target="_blank">Live Demo</a>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>SA</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+    </nav>
 
-        <div class="project-card">
-            <h3>Project 2: Task Tracker</h3>
-            <img src="assets/images/project2-image.png" alt="Project 3">
-            <p>A productivity app to track tasks, with features like CRUD operations and analytics.</p>
-            <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
-            <a href="https://github.com/samuel-adetsi/task-tracker" target="_blank">GitHub Repo</a> |
-            <a href="https://task-tracker-app-demo.com" target="_blank">Live Demo</a>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Samuel Adetsi</h1>
+            <p class="hero-subtitle">Full Stack Developer & Data Analyst</p>
+            <p class="hero-description">Crafting elegant solutions with clean code and intuitive design</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
         </div>
+        <div class="hero-bg-animation"></div>
+    </header>
 
-        <div class="project-card">
-            <h3>Project 3: Task Tracker</h3>
-            <img src="assets/images/project3-image.png" alt="Project 4">
-            <p>A productivity app to track tasks, with features like CRUD operations and analytics.</p>
-            <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
-            <a href="https://github.com/samuel-adetsi/task-tracker" target="_blank">GitHub Repo</a> |
-            <a href="https://task-tracker-app-demo.com" target="_blank">Live Demo</a>
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Samuel Adetsi, a passionate full-stack developer with a strong foundation in front-end development and data analysis. I thrive on transforming complex problems into elegant, efficient solutions.</p>
+                    <p>With expertise in modern web technologies and a keen eye for user experience, I create applications that are not only functional but also delightful to use. My background in data analysis allows me to build data-driven solutions that provide real value to users and businesses.</p>
+                    <a href="assets/resume/samuel_adetsi-resume.pdf" download class="resume-btn">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>2+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Technologies Mastered</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="project-card">
-            <h3>Project 4: Task Tracker</h3>
-            <img src="assets/images/project4-image.png" alt="Project 4">
-            <p>A productivity app to track tasks, with features like CRUD operations and analytics.</p>
-            <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
-            <a href="https://github.com/samuel-adetsi/task-tracker" target="_blank">GitHub Repo</a> |
-            <a href="https://task-tracker-app-demo.com" target="_blank">Live Demo</a>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop" alt="Task Management System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/samuel-adetsi/task-tracker" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://task-tracker-app-demo.com" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management System</h3>
+                        <p>A comprehensive productivity application featuring real-time collaboration, advanced analytics, and intuitive task organization.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/samuel-adetsi/ecommerce-platform" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://ecommerce-demo.com" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with secure payment processing, inventory management, and responsive design.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Express.js</span>
+                            <span>PostgreSQL</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop" alt="Weather Analytics Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/samuel-adetsi/weather-dashboard" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://weather-dashboard-demo.com" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Analytics Dashboard</h3>
+                        <p>Interactive weather visualization platform with predictive analytics and location-based forecasting.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Python</span>
+                            <span>OpenWeather API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Social Media Analytics">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/samuel-adetsi/social-analytics" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://social-analytics-demo.com" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Social Media Analytics</h3>
+                        <p>Advanced analytics platform for social media insights with real-time monitoring and automated reporting.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>Flask</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="project-card">
-            <h3>Project 5: Task Tracker</h3>
-            <img src="assets/images/project5-image.png" alt="Project 5">
-            <p>A productivity app to track tasks, with features like CRUD operations and analytics.</p>
-            <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
-            <a href="https://github.com/samuel-adetsi/task-tracker" target="_blank">GitHub Repo</a> |
-            <a href="https://task-tracker-app-demo.com" target="_blank">Live Demo</a>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i>Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TypeScript</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i>Backend & Database</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i>Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-level">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Analysis</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>SQL</li>
-    </ul>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>samuel.adetsi@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vancouver, BC, Canada</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/{form_id}" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out using the form below:</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; <span id="year"></span> Samuel Adetsi. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/samuel-adetsi" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/samuel-adetsi" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/samuel_adetsi" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:samuel.adetsi@example.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <form action="https://formspree.io/f/{form_id}" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; <span id="year"></span> Samuel Adetsi. All rights reserved.</p>
-</footer>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
