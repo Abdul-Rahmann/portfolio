@@ -287,14 +287,14 @@ nav {
         radial-gradient(circle at 20% 80%, rgba(255, 107, 107, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(255, 230, 109, 0.05) 0%, transparent 50%);
-    animation: dataFlow 20s ease-in-out infinite;
+    animation: none;
 }
 
-@keyframes dataFlow {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    33% { transform: translateY(-20px) rotate(1deg); }
-    66% { transform: translateY(10px) rotate(-1deg); }
-}
+/*@keyframes dataFlow {*/
+/*    0%, 100% { transform: translateY(0) rotate(0deg); }*/
+/*    33% { transform: translateY(-20px) rotate(1deg); }*/
+/*    66% { transform: translateY(10px) rotate(-1deg); }*/
+/*}*/
 
 .hero-content {
     position: relative;
@@ -347,7 +347,7 @@ nav {
     background:
         radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(0, 153, 204, 0.1) 0%, transparent 50%);
-    animation: float 8s ease-in-out infinite;
+    animation: none 8s ease-in-out infinite;
 }
 
 @keyframes float {
