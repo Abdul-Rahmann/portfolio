@@ -1,28 +1,16 @@
-// Portfolio JavaScript - Data Science Theme
+// Portfolio JavaScript - Data Science Theme - Cleaned Version
 document.addEventListener('DOMContentLoaded', function () {
     // ==================== Navigation ====================
     const nav = document.querySelector('nav');
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu a');
+    const sections = document.querySelectorAll('section');
 
     // Mobile menu toggle
     hamburger.addEventListener('click', function () {
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
-
-        // Animate hamburger
-        const spans = hamburger.querySelectorAll('span');
-        spans.forEach((span, index) => {
-            if (hamburger.classList.contains('active')) {
-                if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                if (index === 1) span.style.opacity = '0';
-                if (index === 2) span.style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                span.style.transform = 'none';
-                span.style.opacity = '1';
-            }
-        });
     });
 
     // Close mobile menu when clicking on nav links
@@ -30,16 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
-            const spans = hamburger.querySelectorAll('span');
-            spans.forEach(span => {
-                span.style.transform = 'none';
-                span.style.opacity = '1';
-            });
         });
     });
 
-    // Navbar scroll effect
+    // Combined scroll handler for navbar effects and active nav links
     window.addEventListener('scroll', function () {
+        // Navbar scroll effect
         if (window.scrollY > 100) {
             nav.classList.add('scrolled');
             nav.style.background = 'rgba(10, 10, 10, 0.98)';
@@ -49,6 +33,22 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.style.background = 'rgba(10, 10, 10, 0.95)';
             nav.style.boxShadow = 'none';
         }
+
+        // Active navigation link
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
     });
 
     // ==================== Smooth Scrolling ====================
@@ -68,34 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // ==================== Active Navigation Link ====================
-    const sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', function () {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // ==================== Stats Display Without Animation ====================
+    // ==================== Stats Display ====================
     const stats = document.querySelectorAll('.stat h3');
 
     stats.forEach(stat => {
-        const originalText = stat.textContent.trim(); // Get the original text, e.g., '1+' or '92%'
-        const numericValue = originalText.replace(/[^\d]/g, ''); // Extract the numeric only part (e.g., '1' or '92')
-        const symbol = originalText.replace(/\d/g, ''); // Extract the non-numeric part (e.g., '+' or '%')
+        const originalText = stat.textContent.trim();
+        const numericValue = originalText.replace(/[^\d]/g, '');
+        const symbol = originalText.replace(/\d/g, '');
 
         // Update the text in place without animation
         stat.textContent = numericValue + symbol;
